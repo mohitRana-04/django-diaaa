@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(https://images.unsplash.com/photo-1521080755838-d2311117f767?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWluaW1hbCUyMG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        display: flex;
+        flex-direction: column; /* Sets the main axis to be vertical */
+        height: 100vh; /* Change from min-height to height to ensure body takes full viewport height */
+        margin: 0; /* Remove any default margin */
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(
+          90deg,
+          #2c5d63,
+          #488b8f
+        ); /* Muted gradient background */
+        padding: 1px 5px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      nav div {
+        /* color: white; */
+        font-size: 24px;
+        font-weight: bold;
+
+        width: 50px;
+        height: 50px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+        cursor: pointer;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 3px;
+        transition: background-color 0.3s ease;
+      }
+
+      nav ul li:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      h1 {
+        margin-top: 120px;
+        text-align: center;
+        color: white;
+        font-size: 80px;
+      }
+
+      form {
+        display: flex;
+        justify-content: center;
+        margin-top: -200px;
+      }
+
+      input[type="submit"] {
+        background-color: #f47c7c; /* Warm pinkish-red */
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 25px; /* Rounded corners */
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+      }
+
+      input[type="submit"]:hover {
+        transform: translateY(
+          -2px
+        ); /* Moves the button slightly upwards when hovered */
+        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25); /* Increased shadow for a "lifting" effect */
+      }
+
+      input[type="submit"]:active {
+        transform: translateY(0); /* Resets the button position when clicked */
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); /* Decreased shadow for a "pressing down" effect */
+      }
+      footer {
+        text-align: center;
+        /* position: relative; */
+
+        /* padding: 10px; */
+        background-color: rgba(255, 255, 255, 0.5);
+        /* Push the footer to the bottom */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <!-- this div should be on the left side -->
+      <div>
+        <img
+          src="https://i.ibb.co/m42wQhg/Screenshot-2023-10-16-141715-removebg-preview.png"
+          alt="Logo"
+          width="130"
+        />
+        <!-- adjust width as needed -->
+      </div>
+      <ul>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <!-- this h1 tag below the navbar -->
+    <h1>Welcome to Diabetes Prediction</h1>
+    <!-- beautified button -->
+    <main>
+      <form action="predict">
+        <input type="submit" value="Let's Get Started" />
+      </form>
+    </main>
+    <!-- navigation bar -->
+    <footer>Developed with 💖</footer>
+  </body>
+</html>

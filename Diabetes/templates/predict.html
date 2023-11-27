@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(https://images.unsplash.com/photo-1521080755838-d2311117f767?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWluaW1hbCUyMG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80i);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+        padding-top: 70px; /* Adjusted space for navbar */
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(90deg, #2c5d63, #488b8f);
+        /* padding: 1px 5px; */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+      }
+      nav div {
+        /* color: white; */
+        font-size: 24px;
+        font-weight: bold;
+
+        width: 50px;
+        height: 50px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+        cursor: pointer;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 3px;
+        transition: background-color 0.3s ease;
+      }
+
+      nav ul li:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      table {
+        width: 50%;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      tr:first-child {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      /* Input field within table */
+      td input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: rgba(0, 0, 0, 0.1);
+        color: white;
+      }
+
+      /* Button styles */
+      button {
+        background-color: #f47c7c;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        transform: translateY(
+          -2px
+        ); /* Moves the button slightly upwards when hovered */
+        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25);
+      }
+
+      /* Result div styles */
+
+      div h2 {
+        color: white;
+      }
+
+      div p {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      .result-container {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Adjust the gap between h2 and p */
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div></div>
+      <ul>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <form action="result">
+      <div class="content-container">
+        <table>
+          <tr>
+            <td>Pregnancies</td>
+            <td><input type="text" name="n1" /></td>
+          </tr>
+          <tr>
+            <td>Glucose</td>
+            <td><input type="text" name="n2" /></td>
+          </tr>
+          <tr>
+            <td>Blood Pressure</td>
+            <td><input type="text" name="n3" /></td>
+          </tr>
+          <tr>
+            <td>Skin Thickness</td>
+            <td><input type="text" name="n4" /></td>
+          </tr>
+          <tr>
+            <td>Insulin</td>
+            <td><input type="text" name="n5" /></td>
+          </tr>
+          <tr>
+            <td>BMI</td>
+            <td><input type="text" name="n6" /></td>
+          </tr>
+          <tr>
+            <td>Diabetes Pedigree Function</td>
+            <td><input type="text" name="n7" /></td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td><input type="text" name="n8" /></td>
+          </tr>
+        </table>
+        <div>
+          <button type="submit">Submit</button>
+          <div class="result-container">
+            <h2>Result:</h2>
+            <p>{{result2}}</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
